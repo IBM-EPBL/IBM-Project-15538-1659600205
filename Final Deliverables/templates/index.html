@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Language Recognition</title>
+    <link rel="stylesheet" href="../static/css/bulma.min.css">
+    <script defer src="../static/js/all.js"></script>
+    <style>
+      body{
+        background-image: url('../static/images/bg.jpg');
+        background-size: cover;
+      }
+    </style>
+
+  </head>
+
+    
+<body>
+
+<!-- .hero -->
+<section class="hero is-fullheight" has-background-black>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title" style="color: antiquewhite; text-align: center; text-shadow: 0 0 3px black, 0 0 5px black">
+                American Sign Language Translator
+            </h1>
+        </div>   
+        </section> 
+
+
+    <section class="section">
+        <div class="container has-text-centered bg-text" style="width: 100%">
+                <p class="subtitle">
+                  <strong style="color: antiquewhite; font-size: 32px; text-shadow: 0 0 3px black, 0 0 5px black">
+                    Upload your Gesture for Translation
+                  </strong>
+                </p>
+              <div>
+                <i class="arrow_down"></i>
+                <form action="/predict" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+                  <div class="file has-name is-centered" style="border: 10px;">     
+                      <label class="file-label" style="background-color: palegoldenrod;">
+                        <input class="file-input" type="file" id="image" name = "image">
+                        <span class="file-cta">
+                          <span class="file-label">
+                            Upload an image
+                          </span>
+                        </span>
+                        <span class="file-name" id="file-name">
+                          No file chosen
+                        </span>
+      
+                      </label>
+                    </div>
+                    <br>
+                    <input type="submit" value="Translate" class="button" name = "image" id="classify_button" style="background-color: antiquewhite; color: black;">
+                </form>
+      
+                </div>
+               
+              </div>
+            </div>
+        </div>
+</section>
+
+
+<!-- /.hero -->
+
+
+<script src="../static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Language Recognition</title>
+    <link rel="stylesheet" href="../static/css/bulma.min.css">
+    <script defer src="../static/js/all.js"></script>
+
+    <style>
+         body{
+        background-image: url('../static/images/bg.jpg');
+        background-size: cover;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+  </head>
+
+    
+<body>
+
+<!-- .hero -->
+<section class="hero is-fullheight" has-background-black>
+
+    <section class="section">
+        <div class="container" >
+            <h1 class="title" style="color: antiquewhite; text-align: center; text-shadow: 0 0 3px black, 0 0 5px black">
+                American Sign Language Translator
+            </h1>
+        </div>   
+        </section> 
+
+        <div class="columns">
+                <div class="column is-narrow">
+                </div>
+
+
+                <div class="column is-one-third has-text-centered">
+                  <!-- <figure class="image is-1by1"> -->
+                    <img class="pred_img" src="{{ url_for('send_file', filename=image_file_name)}}" width="120" height="120"/>
+                  <!-- </figure> -->
+                </div>
+                <div class="column" style="font-size:2.5rem" >
+      
+                        <h2 id ="pred" style="color: antiquewhite; font-size: 32px; text-shadow: 0 0 3px black, 0 0 5px black">
+                            This Gesture stands for <span style="font-weight: bold; color:whitesmoke;">{{ label }}</span>
+                        </h2>
+                        <br>
+                        <a href="/" class="button is-outlined" style="font-size:1.5rem">Back to Home</a>
+                    </div>
+            </div>    
+
+    <section class="section">
+            <div class="container">
+            </div>   
+            </section> 
+        </section>
+<!-- /.hero -->
+
+<script src="../static/script.js"></script>
+
+</body>
+</html>
